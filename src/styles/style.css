@@ -1,0 +1,295 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Notes App Container */
+.notes-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.notes-app__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.notes-app__header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.notes-app__body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.search-input::placeholder {
+  color: #888888;
+}
+
+/* Notes Form */
+.notes-form {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #333333;
+}
+
+.notes-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.char-limit {
+  font-size: 0.875rem;
+  color: #888888;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #666666;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  margin-right: 8px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000000;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Notes Content */
+.notes-app__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.notes-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 8px;
+}
+
+/* Notes List */
+.notes-list {
+  display: grid;
+  gap: 16px;
+}
+
+.notes-list__empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888888;
+  font-style: italic;
+}
+
+/* Notes Item */
+.notes-item {
+  background-color: #2a2a2a;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.notes-item:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+.notes-item__content {
+  margin-bottom: 16px;
+}
+
+.notes-item__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.notes-item__date {
+  font-size: 0.875rem;
+  color: #888888;
+  margin-bottom: 12px;
+}
+
+.notes-item__body {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.notes-item__actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notes-app {
+    padding: 16px;
+  }
+  
+  .notes-app__body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .notes-app__header h1 {
+    font-size: 2rem;
+  }
+  
+  .search-input {
+    max-width: 100%;
+  }
+  
+  .notes-item__actions {
+    flex-direction: column;
+  }
+  
+  .btn-danger {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notes-app {
+    padding: 12px;
+  }
+  
+  .notes-form {
+    padding: 16px;
+  }
+  
+  .notes-item {
+    padding: 16px;
+  }
+}
